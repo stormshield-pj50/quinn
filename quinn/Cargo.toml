@@ -45,6 +45,7 @@ tracing = "0.1.10"
 tokio = { version = "1.13.0", features = ["sync"] }
 udp = { package = "quinn-udp", path = "../quinn-udp", version = "0.3" }
 webpki = { version = "0.22", default-features = false, optional = true }
+futures = "0.3.25"
 
 [dev-dependencies]
 anyhow = "1.0.22"
@@ -66,6 +67,14 @@ required-features = ["tls-rustls"]
 
 [[example]]
 name = "client"
+required-features = ["tls-rustls"]
+
+[[example]]
+name = "datagram_server"
+required-features = ["tls-rustls"]
+
+[[example]]
+name = "datagram_client"
 required-features = ["tls-rustls"]
 
 [[example]]
